@@ -1,0 +1,13 @@
+---
+- name: Playbook for applying configlets throuhg CVP
+  hosts: cvp1
+
+  vars_files:
+    - ../vars/cvp_model.yml
+
+  tasks:
+    - name: applying configlets to device
+      arista.cvp.cv_device_v3:
+        devices: "{{ cvp_devices_mlag }}"
+        state: present
+        apply_mode: loose
