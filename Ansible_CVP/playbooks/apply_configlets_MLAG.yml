@@ -1,9 +1,9 @@
 ---
 - name: Playbook for applying configlets throuhg CVP
   hosts: cvp1
-
   vars_files:
     - ../vars/cvp_model.yml
+  gather_facts: no
 
   tasks:
     - name: applying configlets to device

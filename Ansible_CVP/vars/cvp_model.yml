@@ -12,28 +12,28 @@ cvp_containers:
   DC2:
     parentContainerName: Tenant
 
-  CVP_DEVICES_MLAG:
-  - fqdn: 'leaf1'
-    parentContainerName: 'Leaf'
-    configlets:
-      - 'ATD-INFRA'
-      - 'leaf1-base'
-      - 'MLAG_Left'
-  - fqdn: 'leaf2'
-    parentContainerName: 'Leaf'
-    configlets:
-      - 'ATD-INFRA'
-      - 'leaf2-base'
-      - 'MLAG_Right'
-  - fqdn: 'leaf3'
-    parentContainerName: 'Leaf'
-    configlets:
-      - 'ATD-INFRA'
-      - 'leaf3-base'
-      - 'MLAG_Left'
-  - fqdn: 'leaf4'
-    parentContainerName: 'Leaf'
-    configlets:
-      - 'ATD-INFRA'
-      - 'leaf4-base'
-      - 'MLAG_Right'
+cvp_devices_mlag:
+- fqdn: 'leaf1'
+  parentContainerName: 'Leaf'
+  configlets:
+    - 'ATD-INFRA'
+    - 'leaf1-base'
+    - 'MLAG_Left'
+- fqdn: 'leaf2'
+  parentContainerName: 'Leaf'
+  configlets:
+    - 'ATD-INFRA'
+    - 'leaf2-base'
+    - 'MLAG_Right'
+- fqdn: 'leaf3'
+  parentContainerName: 'Leaf'
+  configlets:
+    - 'ATD-INFRA'
+    - 'leaf3-base'
+    - 'MLAG_Left'
+- fqdn: 'leaf4'
+  parentContainerName: 'Leaf'
+  configlets:
+    - 'ATD-INFRA'
+    - 'leaf4-base'
+    - 'MLAG_Right'
