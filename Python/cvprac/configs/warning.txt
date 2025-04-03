@@ -1,0 +1,3 @@
+banner motd
+the end is near, RUN!
+EOF
