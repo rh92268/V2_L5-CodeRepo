@@ -1,0 +1,17 @@
+---
+- name: run pending tasks
+  hosts: cvp1
+
+  vars_files:
+    - ../vars/cvp_model.yml
+
+  tasks:
+    - name: grab and register facts 
+      arista.cvp.cv_facts_v3:
+        facts:
+          - tasks
+        regexp_filter: 'Pending'
+      register: CVP_FACTS
+    - name: run pending tasks
+      arista.cvp.cv_task_v3:
+        tasks: "{{ CVP_FACTS.data.cvp_tasks | list }}"
